@@ -13,6 +13,23 @@ const GlobalStyle = createGlobalStyle`
      }
     }
 
+    button{
+    
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 3px solid black;
+    background: transparent;
+    color: black;
+    transition: all 0.5s ease;
+    font-family: 'Hind', sans-serif;
+    &:hover{
+        background-color: black;
+        color: white;
+    }
+    }
+
 `;
 
 export default GlobalStyle;
