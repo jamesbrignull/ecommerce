@@ -3,14 +3,14 @@ import * as S from "./ProductCard.style";
 
 function ProductCard() {
   return (
-    <>
+    <S.Card>
       <img
-        src="https://i.ibb.co/HPSxNgh/Screenshot-2020-11-22-at-11-52-34.png"
-        alt="product photo"
+        src="https://i.ibb.co/sbM3b0W/Screenshot-2020-11-22-at-12-23-33.png"
+        alt="product"
       />
       <h3>Product Name</h3>
       <h4>Product Price</h4>
-    </>
+    </S.Card>
   );
 }
 

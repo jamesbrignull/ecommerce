@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Featured.style";
+import ProductCard from "../ProductCard/ProductCard";
 
 function Featured() {
   return (
@@ -9,7 +10,12 @@ function Featured() {
         <p>To see all of our boxes, head over to our shop:</p>
         <button>Shop Now</button>
       </S.TextContainer>
-      <S.ProductContainer>Products blah blah</S.ProductContainer>
+      <S.ProductContainer>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </S.ProductContainer>
     </S.FeatContainer>
   );
 }
