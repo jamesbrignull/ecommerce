@@ -1,15 +1,12 @@
 import React from "react";
 import * as S from "./ProductCard.style";
 
-function ProductCard() {
+function ProductCard({ name, price, imageUrl }) {
   return (
     <S.Card>
-      <img
-        src="https://i.ibb.co/sbM3b0W/Screenshot-2020-11-22-at-12-23-33.png"
-        alt="product"
-      />
-      <h3>Product Name</h3>
-      <h4>Product Price</h4>
+      <h3>{name}</h3>
+      <h4>£{price}</h4>
+      <img src={imageUrl} alt="product" />
     </S.Card>
   );
 }

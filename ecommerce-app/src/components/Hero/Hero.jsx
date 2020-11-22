@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Hero.style";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -13,7 +14,12 @@ function Hero() {
           <h1>ButcherBox</h1>
           <p>Fresh cuts to your door</p>
         </S.HeroText>
-        <S.HeroBtn>Shop Now</S.HeroBtn>
+        <Link
+          to="/shop"
+          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          <S.HeroBtn>Shop Now</S.HeroBtn>
+        </Link>
       </S.Content>
       <S.BannerImg
         src="https://i.ibb.co/Tqbg7FW/Screenshot-2020-11-22-at-11-19-00.png"

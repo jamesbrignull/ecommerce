@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./Featured.style";
 import ProductCard from "../ProductCard/ProductCard";
+import FEATURED_DATA from "../../redux/Products/featuredData";
 
 function Featured() {
   return (
@@ -11,10 +12,9 @@ function Featured() {
         <button>Shop Now</button>
       </S.TextContainer>
       <S.ProductContainer>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {FEATURED_DATA.map(({ id, ...restProps }) => (
+          <ProductCard key={id} {...restProps} />
+        ))}
       </S.ProductContainer>
     </S.FeatContainer>
   );

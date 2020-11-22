@@ -25,7 +25,7 @@ export const Content = styled(motion.div)`
 export const HeroText = styled(motion.div)`
   text-align: center;
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 2rem;
   border: 3px solid white;
 
@@ -39,12 +39,12 @@ export const HeroBtn = styled(motion.button)`
   margin-top: 2rem;
   width: 60%;
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   border: 3px solid white;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: rgba(65, 65, 65, 0.75);
+    /* color: black; */
   }
 `;
 

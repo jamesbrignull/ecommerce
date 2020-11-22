@@ -24,7 +24,7 @@ export const TextContainer = styled(motion.div)`
 `;
 
 export const ProductContainer = styled(motion.div)`
-  margin: 1rem 0rem;
+  margin: 1rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 `;
