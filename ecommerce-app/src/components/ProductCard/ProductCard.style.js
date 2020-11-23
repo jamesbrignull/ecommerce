@@ -14,4 +14,8 @@ export const Card = styled(motion.div)`
   h4 {
     padding: 0.5rem;
   }
+
+  img {
+    object-fit: cover;
+  }
 `;

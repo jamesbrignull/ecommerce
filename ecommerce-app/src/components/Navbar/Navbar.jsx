@@ -1,22 +1,22 @@
 import React from "react";
 import * as S from "./Navbar.style";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
-      <div className="logo-container">
-        <h1 className="logo">ButcherBox</h1>
-      </div>
-      <div className="options-container">
-        <ul>
-          <li>Home</li>
-          <li>Boxes</li>
-          <li>About</li>
-          <li>Sign In</li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
+    <S.NavContainer>
+      <S.LogoContainer>
+        <Link to="/">
+          <h1>ButcherBox</h1>
+        </Link>
+      </S.LogoContainer>
+      <S.OptionsContainer>
+        <Link to="/">Home</Link>
+        <Link to="/">About</Link>
+        <Link to="/shop">Shop</Link>
+        <Link to="/">Sign In</Link>
+      </S.OptionsContainer>
+    </S.NavContainer>
   );
 }
 
