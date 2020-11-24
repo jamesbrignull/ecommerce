@@ -16,7 +16,6 @@ export const LogoContainer = styled(motion.div)`
 
 export const OptionsContainer = styled(motion.div)`
   font-family: "Julius Sans One", sans-serif;
-  text-decoration: none;
   width: 40vw;
   display: flex;
   justify-content: space-around;

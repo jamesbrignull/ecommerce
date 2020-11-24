@@ -35,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
         color: black;
     }
 
+    h1{
+        font-family: "Julius Sans One", sans-serif;
+    }
+
 `;
 
 export default GlobalStyle;

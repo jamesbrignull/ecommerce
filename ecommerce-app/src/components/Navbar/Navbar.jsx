@@ -14,7 +14,7 @@ function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/">About</Link>
         <Link to="/shop">Shop</Link>
-        <Link to="/">Sign In</Link>
+        <Link to="/signin">Sign In</Link>
       </S.OptionsContainer>
     </S.NavContainer>
   );
