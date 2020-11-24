@@ -2,12 +2,14 @@ import React from "react";
 import * as S from "./SignInUp.style";
 
 import SignIn from "../../components/SignIn/SignIn";
+import SignUp from "../../components/SignUp/SignUp";
 
 function SignInUp() {
   return (
-    <div>
+    <S.Container>
       <SignIn />
-    </div>
+      <SignUp />
+    </S.Container>
   );
 }
 
