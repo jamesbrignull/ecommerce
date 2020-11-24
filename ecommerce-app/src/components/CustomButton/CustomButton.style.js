@@ -1,5 +1,20 @@
 import styled, { css } from "styled-components";
 
+const googleSignInStyles = css`
+  background-color: #4285f4;
+  color: white;
+
+  &:hover {
+    background-color: #357ae8;
+  }
+`;
+
+const getButtonStyles = (props) => {
+  if (props.isGoogleSignIn) {
+    return googleSignInStyles;
+  }
+};
+
 export const Button = styled.button`
   min-width: 165px;
   width: auto;
@@ -15,4 +30,6 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   color: black;
+
+  ${getButtonStyles}
 `;

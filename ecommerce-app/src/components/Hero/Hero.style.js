@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-export const HeroImg = styled(motion.img)`
+export const HeroImg = styled.img`
   width: 100%;
   height: 90vh;
   max-height: 90%;
@@ -11,7 +10,7 @@ export const HeroImg = styled(motion.img)`
   position: relative;
 `;
 
-export const Content = styled(motion.div)`
+export const Content = styled.div`
   position: absolute;
   top: 40%;
   left: 50%;
@@ -22,7 +21,7 @@ export const Content = styled(motion.div)`
   align-items: center;
 `;
 
-export const HeroText = styled(motion.div)`
+export const HeroText = styled.div`
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.75);
@@ -35,7 +34,7 @@ export const HeroText = styled(motion.div)`
   }
 `;
 
-export const HeroBtn = styled(motion.button)`
+export const HeroBtn = styled.button`
   margin-top: 2rem;
   width: 60%;
   color: white;
@@ -48,6 +47,6 @@ export const HeroBtn = styled(motion.button)`
   }
 `;
 
-export const BannerImg = styled(motion.img)`
+export const BannerImg = styled.img`
   width: 100%;
 `;

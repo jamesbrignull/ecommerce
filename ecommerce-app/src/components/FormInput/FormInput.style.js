@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { motion } from "framer-motion";
 
 const shrinkLabelStyles = css`
   top: -14px;
@@ -7,7 +6,7 @@ const shrinkLabelStyles = css`
   color: black;
 `;
 
-export const GroupContainer = styled(motion.div)`
+export const GroupContainer = styled.div`
   position: relative;
   margin: 45px 0;
 

@@ -1,10 +1,12 @@
 import React from "react";
 import * as S from "./SignIn.style";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 import FormInput from "../FormInput/FormInput";
 import Button from "../CustomButton/CustomButton";
 
-import { signInWithGoogle } from "./../../firebase/utils";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -51,6 +53,17 @@ class SignIn extends React.Component {
           <S.ButtonsBarContainer>
             <Button type="submit" value="Submit Form">
               Sign In
+            </Button>
+            <Button
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+              style={{
+                display: "block",
+                alignItems: "center",
+              }}
+            >
+              Sign in with:
+              <FontAwesomeIcon icon={faGoogle} />
             </Button>
           </S.ButtonsBarContainer>
         </form>

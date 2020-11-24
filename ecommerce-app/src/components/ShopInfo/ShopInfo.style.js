@@ -1,7 +1,6 @@
 import styled from "styled-components/macro";
-import { motion } from "framer-motion";
 
-export const ShopInfo = styled(motion.div)`
+export const ShopInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

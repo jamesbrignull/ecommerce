@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-export const NavContainer = styled(motion.div)`
+export const NavContainer = styled.div`
   min-height: 10vh;
   width: 100%;
   display: flex;
@@ -10,11 +9,11 @@ export const NavContainer = styled(motion.div)`
   padding: 1.5rem;
 `;
 
-export const LogoContainer = styled(motion.div)`
+export const LogoContainer = styled.div`
   font-family: "Julius Sans One", sans-serif;
 `;
 
-export const OptionsContainer = styled(motion.div)`
+export const OptionsContainer = styled.div`
   font-family: "Julius Sans One", sans-serif;
   width: 40vw;
   display: flex;

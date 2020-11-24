@@ -1,8 +1,9 @@
 import React from "react";
 import * as S from "./Navbar.style";
 import { Link } from "react-router-dom";
+import { auth } from "../../firebase/firebase.utils";
 
-function Navbar() {
+function Navbar({ currentUser }) {
   return (
     <S.NavContainer>
       <S.LogoContainer>
@@ -14,7 +15,13 @@ function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/">About</Link>
         <Link to="/shop">Shop</Link>
-        <Link to="/signin">Sign In</Link>
+        {currentUser ? (
+          <Link to="/" onClick={() => auth.signOut()}>
+            Sign Out
+          </Link>
+        ) : (
+          <Link to="/signin">Sign In</Link>
+        )}
       </S.OptionsContainer>
     </S.NavContainer>
   );

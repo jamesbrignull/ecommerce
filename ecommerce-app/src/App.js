@@ -1,6 +1,7 @@
 import React from "react";
-// Routing
+// Misc
 import { Switch, Route } from "react-router-dom";
+import { auth } from "./firebase/firebase.utils";
 // Styles
 import GlobalStyle from "./Globalstyle";
 // Pages
@@ -9,41 +10,32 @@ import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import SignInUp from "./pages/SignInUp/SignInUp";
 import Footer from "./components/Footer/Footer";
-// Firebase
-import { auth } from "./firebase/utils";
-
-const initialState = {
-  currentUser: null,
-};
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      ...initialState,
+      currentUser: null,
     };
-
-    // authListener = null
-
-    // componentDidMount(){
-    //   this.authListener = auth.onAuthStateChanged(userAuth => {
-    //     if(!userAuth) return;
-
-    //     this.setState({
-    //       currentUser: userAuth
-    //     })
-    //   })
-    // }
-
-    // componentWillUnmount(){
-    //   this.authListener();
-    // }
   }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
+      this.setState({ currentUser: user });
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
+
   render() {
     return (
       <>
         <GlobalStyle />
-        <Navbar />
+        <Navbar currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={Shop} />
