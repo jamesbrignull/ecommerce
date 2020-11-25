@@ -22,4 +22,6 @@ export const ItemCountContainer = styled.span`
   font-size: 10px;
   font-weight: bold;
   bottom: 12px;
+  color: black;
+  font-family: "Julius Sans One", sans-serif;
 `;

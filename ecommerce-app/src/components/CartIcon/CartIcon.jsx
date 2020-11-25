@@ -1,13 +1,21 @@
 import React from "react";
 import * as S from "./CartIcon.style";
 
-function CartIcon() {
+// Redux
+import { connect } from "react-redux";
+import { selectCartItemsCount } from "../../redux/Cart/cartSelectors";
+
+function CartIcon({ itemCount }) {
   return (
     <S.CartContainer>
       <S.ShoppingIcon />
-      <S.ItemCountContainer>0</S.ItemCountContainer>
+      <S.ItemCountContainer>{itemCount}</S.ItemCountContainer>
     </S.CartContainer>
   );
 }
 
-export default CartIcon;
+const mapStateToProps = (state) => ({
+  itemCount: selectCartItemsCount(state),
+});
+
+export default connect(mapStateToProps)(CartIcon);
