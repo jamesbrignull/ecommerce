@@ -7,11 +7,17 @@ import { BrowserRouter } from "react-router-dom";
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./redux/rootReducer";
 import { Provider } from "react-redux";
+import logger from "redux-logger";
 import thunk from "redux-thunk";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
+const middlewares = [logger, thunk];
+
+const store = createStore(
+  rootReducer,
+  composeEnhancer(applyMiddleware(...middlewares))
+);
 
 ReactDOM.render(
   <React.StrictMode>
