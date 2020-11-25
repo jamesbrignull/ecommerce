@@ -17,7 +17,9 @@ function ProductCard({ item, addItem }) {
           <h4>£{price}</h4>
         </div>
 
-        <Button cartButtonStyles>Add to Cart</Button>
+        <Button onClick={() => addItem(item)} cartButtonStyles>
+          Add to Cart
+        </Button>
       </S.InfoConainer>
 
       <img src={imageUrl} alt="product" />
