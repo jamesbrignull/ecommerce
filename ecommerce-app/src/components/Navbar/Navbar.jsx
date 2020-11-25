@@ -3,8 +3,9 @@ import * as S from "./Navbar.style";
 // Firebase
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
-// Redux
+// Redux & State
 import { connect } from "react-redux";
+import { selectCurrentUser } from "../../redux/User/userSelectors";
 
 // Components
 import CartIcon from "../CartIcon/CartIcon";
@@ -33,8 +34,8 @@ function Navbar({ currentUser }) {
     </S.NavContainer>
   );
 }
-const mapStateToProps = ({ user: { currentUser } }) => ({
-  currentUser,
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
 export default connect(mapStateToProps)(Navbar);

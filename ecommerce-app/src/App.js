@@ -5,9 +5,10 @@ import GlobalStyle from "./Globalstyle";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { auth } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/firebase.utils";
-// Redux
+// Redux & State
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/User/userActions";
+import { selectCurrentUser } from "./redux/User/userSelectors";
 // Pages
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage";
@@ -63,8 +64,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
