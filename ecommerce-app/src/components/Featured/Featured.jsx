@@ -12,8 +12,8 @@ function Featured() {
         <button>Shop Now</button>
       </S.TextContainer>
       <S.ProductContainer>
-        {FEATURED_DATA.map(({ id, ...restProps }) => (
-          <ProductCard key={id} {...restProps} />
+        {FEATURED_DATA.map((item) => (
+          <ProductCard key={item.id} item={item} />
         ))}
       </S.ProductContainer>
     </S.FeatContainer>

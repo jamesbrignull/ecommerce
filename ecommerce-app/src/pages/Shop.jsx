@@ -1,16 +1,18 @@
 import React from "react";
+import styled from "styled-components/macro";
 import ShopInfo from "../components/ShopInfo/ShopInfo";
 import ProductCard from "../components/ProductCard/ProductCard";
+// import ProductDetail from "../components/ProductDetail/ProductDetail";
 import CATALOG_DATA from "../redux/Products/catalogData";
-import styled from "styled-components/macro";
 
 function Shop() {
   return (
     <div>
+      {/* <ProductDetail /> */}
       <ShopInfo />
       <ProductContainer>
-        {CATALOG_DATA.map(({ id, ...restProps }) => (
-          <ProductCard key={id} {...restProps} />
+        {CATALOG_DATA.map((item) => (
+          <ProductCard key={item.id} item={item} />
         ))}
       </ProductContainer>
     </div>

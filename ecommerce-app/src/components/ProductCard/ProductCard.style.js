@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Card = styled.div`
   display: flex;
@@ -16,5 +16,17 @@ export const Card = styled.div`
 
   img {
     object-fit: cover;
+  }
+`;
+
+export const InfoConainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `;

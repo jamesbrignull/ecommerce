@@ -1,5 +1,19 @@
 import styled, { css } from "styled-components";
 
+const cartButtonStyles = css`
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+    border: 2px solid black;
+  }
+`;
+
 const googleSignInStyles = css`
   background-color: #4285f4;
   color: white;
@@ -12,6 +26,9 @@ const googleSignInStyles = css`
 const getButtonStyles = (props) => {
   if (props.isGoogleSignIn) {
     return googleSignInStyles;
+  }
+  if (props.cartButtonStyles) {
+    return cartButtonStyles;
   }
 };
 

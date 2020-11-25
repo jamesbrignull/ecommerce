@@ -1,14 +1,32 @@
 import React from "react";
 import * as S from "./ProductCard.style";
 
-function ProductCard({ name, price, imageUrl }) {
+import { connect } from "react-redux";
+import { addItem } from "../../redux/Cart/cartActions";
+
+import Button from "../CustomButton/CustomButton";
+
+function ProductCard({ item, addItem }) {
+  const { name, price, imageUrl } = item;
+
   return (
     <S.Card>
-      <h3>{name}</h3>
-      <h4>£{price}</h4>
+      <S.InfoConainer>
+        <div className="text">
+          <h3>{name}</h3>
+          <h4>£{price}</h4>
+        </div>
+
+        <Button cartButtonStyles>Add to Cart</Button>
+      </S.InfoConainer>
+
       <img src={imageUrl} alt="product" />
     </S.Card>
   );
 }
 
-export default ProductCard;
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+});
+
+export default connect(null, mapDispatchToProps)(ProductCard);

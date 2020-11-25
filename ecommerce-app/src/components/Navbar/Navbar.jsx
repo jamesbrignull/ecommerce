@@ -6,6 +6,9 @@ import { auth } from "../../firebase/firebase.utils";
 // Redux
 import { connect } from "react-redux";
 
+// Components
+import CartIcon from "../CartIcon/CartIcon";
+
 function Navbar({ currentUser }) {
   return (
     <S.NavContainer>
@@ -25,12 +28,13 @@ function Navbar({ currentUser }) {
         ) : (
           <Link to="/signin">Sign In</Link>
         )}
+        <CartIcon />
       </S.OptionsContainer>
     </S.NavContainer>
   );
 }
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapStateToProps = ({ user: { currentUser } }) => ({
+  currentUser,
 });
 
 export default connect(mapStateToProps)(Navbar);
