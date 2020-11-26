@@ -3,9 +3,10 @@ import styled from "styled-components/macro";
 import ShopInfo from "../components/ShopInfo/ShopInfo";
 import ProductCard from "../components/ProductCard/ProductCard";
 // import ProductDetail from "../components/ProductDetail/ProductDetail";
-import { selectProductItems } from "../redux/Products/productSelectors";
+// Redux & State
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { selectProductItems } from "../redux/Products/productSelectors";
 
 function Shop({ product }) {
   return (

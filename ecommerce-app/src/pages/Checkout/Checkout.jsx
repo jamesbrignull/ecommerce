@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./Checkout.style";
 
 import CheckoutItem from "../../components/CheckoutItem/CheckoutItem";
+import StripeCheckoutButton from "../../components/StripeButton/StripeButton";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -34,7 +35,13 @@ function Checkout({ cartItems, total }) {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <S.TotalContainer>TOTAL: £{total}</S.TotalContainer>
-      <S.WarningContainer></S.WarningContainer>
+      <StripeCheckoutButton price={total} />
+      <S.WarningContainer>
+        *Please use the following test credit card to test payments
+        functionality*
+        <br />
+        4242 4242 4242 4242 - Exp: 12/25 - CVV: 999
+      </S.WarningContainer>
     </S.CheckoutPageContainer>
   );
 }

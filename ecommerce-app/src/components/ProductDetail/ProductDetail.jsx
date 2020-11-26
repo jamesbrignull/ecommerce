@@ -4,7 +4,7 @@ import * as S from "./ProductDetail.style";
 import { useSelector } from "react-redux";
 
 function ProductDetail() {
-  const detail = useSelector((state) => state.products.catalog);
+  const detail = useSelector((state) => state.product);
 
   return (
     <S.CardShadow>

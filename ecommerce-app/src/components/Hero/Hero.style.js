@@ -8,7 +8,6 @@ export const HeroImg = styled.img`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   overflow: hidden;
 `;
 

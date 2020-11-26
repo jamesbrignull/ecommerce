@@ -1,5 +1,6 @@
 import React from "react";
 import * as S from "./Navbar.style";
+import { useLocation } from "react-router-dom";
 // Firebase
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
@@ -11,6 +12,8 @@ import { selectCurrentUser } from "../../redux/User/userSelectors";
 import CartIcon from "../CartIcon/CartIcon";
 
 function Navbar({ currentUser }) {
+  const { pathname } = useLocation();
+
   return (
     <S.NavContainer>
       <S.LogoContainer>
@@ -19,15 +22,29 @@ function Navbar({ currentUser }) {
         </Link>
       </S.LogoContainer>
       <S.OptionsContainer>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/shop">Shop</Link>
+        <Link to="/" style={{ color: pathname === "/" ? "grey" : "" }}>
+          Home
+        </Link>
+        <Link
+          to="/about"
+          style={{ color: pathname === "/about" ? "grey" : "" }}
+        >
+          About
+        </Link>
+        <Link to="/shop" style={{ color: pathname === "/shop" ? "grey" : "" }}>
+          Shop
+        </Link>
         {currentUser ? (
           <Link to="/" onClick={() => auth.signOut()}>
             Sign Out
           </Link>
         ) : (
-          <Link to="/signin">Sign In</Link>
+          <Link
+            to="/signin"
+            style={{ color: pathname === "/signin" ? "grey" : "" }}
+          >
+            Sign In
+          </Link>
         )}
         <Link to="/checkout">
           <CartIcon />
