@@ -3,15 +3,17 @@ import styled from "styled-components/macro";
 import ShopInfo from "../components/ShopInfo/ShopInfo";
 import ProductCard from "../components/ProductCard/ProductCard";
 // import ProductDetail from "../components/ProductDetail/ProductDetail";
-import CATALOG_DATA from "../redux/Products/catalogData";
+import { selectProductItems } from "../redux/Products/productSelectors";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
-function Shop() {
+function Shop({ product }) {
   return (
     <div>
       {/* <ProductDetail /> */}
       <ShopInfo />
       <ProductContainer>
-        {CATALOG_DATA.map((item) => (
+        {product.map((item) => (
           <ProductCard key={item.id} item={item} />
         ))}
       </ProductContainer>
@@ -25,4 +27,8 @@ const ProductContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 `;
 
-export default Shop;
+const mapStateToProps = createStructuredSelector({
+  product: selectProductItems,
+});
+
+export default connect(mapStateToProps)(Shop);

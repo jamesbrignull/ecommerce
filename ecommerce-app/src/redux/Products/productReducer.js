@@ -1,10 +1,7 @@
-import FEATURED_DATA from "./featuredData";
-import CATALOG_DATA from "./catalogData";
+import PRODUCT_DATA from "./productData";
 
 const initState = {
-  featured: FEATURED_DATA,
-  catalog: CATALOG_DATA,
-  giftcards: [],
+  product: PRODUCT_DATA,
 };
 
 const productReducer = (state = initState, action) => {

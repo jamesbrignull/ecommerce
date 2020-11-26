@@ -1,4 +1,4 @@
-const CATALOG_DATA = [
+const PRODUCT_DATA = [
   {
     id: 1,
     name: "Farmer Box",
@@ -168,4 +168,4 @@ const CATALOG_DATA = [
   },
 ];
 
-export default CATALOG_DATA;
+export default PRODUCT_DATA;
