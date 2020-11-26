@@ -12,6 +12,7 @@ import { selectCurrentUser } from "./redux/User/userSelectors";
 // Pages
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage";
+import About from "./pages/About/About";
 import Shop from "./pages/Shop";
 import SignInUp from "./pages/SignInUp/SignInUp";
 import Checkout from "./pages/Checkout/Checkout";
@@ -50,6 +51,7 @@ class App extends React.Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/about" component={About} />
           <Route path="/shop" component={Shop} />
           <Route
             exact

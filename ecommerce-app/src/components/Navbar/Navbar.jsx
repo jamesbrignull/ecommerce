@@ -20,7 +20,7 @@ function Navbar({ currentUser }) {
       </S.LogoContainer>
       <S.OptionsContainer>
         <Link to="/">Home</Link>
-        <Link to="/">About</Link>
+        <Link to="/about">About</Link>
         <Link to="/shop">Shop</Link>
         {currentUser ? (
           <Link to="/" onClick={() => auth.signOut()}>
