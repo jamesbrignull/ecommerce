@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import SignInUp from "./pages/SignInUp/SignInUp";
+import Checkout from "./pages/Checkout/Checkout";
 import Footer from "./components/Footer/Footer";
 
 class App extends React.Component {
@@ -57,6 +58,7 @@ class App extends React.Component {
               this.props.currentUser ? <Redirect to="/shop" /> : <SignInUp />
             }
           />
+          <Route exact path="/checkout" component={Checkout} />
         </Switch>
         <Footer />
       </>

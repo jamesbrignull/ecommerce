@@ -29,7 +29,9 @@ function Navbar({ currentUser }) {
         ) : (
           <Link to="/signin">Sign In</Link>
         )}
-        <CartIcon />
+        <Link to="/checkout">
+          <CartIcon />
+        </Link>
       </S.OptionsContainer>
     </S.NavContainer>
   );

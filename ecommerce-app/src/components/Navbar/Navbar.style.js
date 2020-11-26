@@ -19,4 +19,8 @@ export const OptionsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  * {
+    margin: 0rem 0.5rem;
+  }
 `;
