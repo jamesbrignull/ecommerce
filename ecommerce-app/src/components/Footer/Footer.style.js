@@ -9,6 +9,18 @@ export const Footer = styled.div`
   top: 100;
   min-height: 10vh;
   width: 100%;
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    font-size: 80%;
+    text-align: center;
+    font-size: 60%;
+
+    * {
+      padding: 5px;
+    }
+  }
 `;
 
 export const IconContainer = styled.div`

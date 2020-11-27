@@ -15,10 +15,22 @@ export const Container = styled.div`
   img {
     height: 400px;
     width: 600px;
+    max-width: 100%;
+    height: auto;
   }
   p {
     width: 50%;
     align-content: center;
     padding: 1rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    p {
+      width: 85%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 80%;
   }
 `;

@@ -9,6 +9,10 @@ export const HeroImg = styled.img`
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
 `;
 
 export const Content = styled.div`
@@ -22,6 +26,19 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  @media screen and (max-width: 600px) {
+    font-size: 50%;
+    top: 40%;
+  }
+  @media screen and (max-width: 400px) {
+    top: 35%;
+  }
+
+  @media screen and (min-height: 700px) {
+    font-size: 50%;
+    top: 30%;
+  }
 `;
 
 export const HeroText = styled.div`
@@ -35,6 +52,10 @@ export const HeroText = styled.div`
     font-family: "Julius Sans One", sans-serif;
     padding-bottom: 1rem;
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 1rem;
+  }
 `;
 
 export const HeroBtn = styled.button`
@@ -46,7 +67,10 @@ export const HeroBtn = styled.button`
 
   &:hover {
     background-color: rgba(65, 65, 65, 0.75);
-    /* color: black; */
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 50%;
   }
 `;
 

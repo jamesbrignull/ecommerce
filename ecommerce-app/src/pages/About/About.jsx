@@ -29,6 +29,14 @@ function About() {
         dolorum, sint veniam sed error pariatur expedita eaque iure cum, rerum
         odit. Odit veniam ducimus ipsum ratione est quidem voluptatum.
       </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum expedita
+        natus aliquam velit fuga. Odit autem corporis saepe ab architecto? Hic
+        quasi quas adipisci tempora minima vero mollitia. Officia adipisci quis,
+        rerum impedit laudantium eos! Fugiat ipsum reiciendis harum voluptates
+        non est quasi facilis maxime aspernatur deleniti vero, dolor at!
+      </p>
     </S.Container>
   );
 }

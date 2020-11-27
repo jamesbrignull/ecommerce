@@ -48,5 +48,10 @@ export const Button = styled.button`
   justify-content: center;
   color: black;
 
+  @media screen and (max-width: 600px) {
+    font-size: 90%;
+    min-width: 60px;
+  }
+
   ${getButtonStyles}
 `;

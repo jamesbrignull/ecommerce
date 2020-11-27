@@ -17,6 +17,15 @@ export const Card = styled.div`
   img {
     object-fit: cover;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 60%;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 `;
 
 export const InfoConainer = styled.div`

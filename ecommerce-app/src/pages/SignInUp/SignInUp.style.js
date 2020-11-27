@@ -10,6 +10,7 @@ export const Container = styled.div`
     flex-direction: column;
     width: unset;
     align-items: center;
+    padding: 2rem;
 
     > *:first-child {
       margin-bottom: 50px;

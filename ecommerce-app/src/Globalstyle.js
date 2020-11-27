@@ -1,17 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
+    }
     body{
         background: white;
         font-family: 'Hind', sans-serif;
         overflow-x: hidden;
      }
-    }
+    
+    
 
     button{
     
@@ -28,17 +31,19 @@ const GlobalStyle = createGlobalStyle`
         background-color: black;
         color: white;
     }
+    
     }
-
+    
     a{
-        text-decoration: none;
+     text-decoration: none;
         color: black;
     }
 
     h1{
         font-family: "Julius Sans One", sans-serif;
     }
-
+    
+    
 `;
 
 export default GlobalStyle;

@@ -8,7 +8,7 @@ function Featured() {
     <S.FeatContainer>
       <S.TextContainer>
         <h2>Featured Boxes</h2>
-        <p>To see all of our boxes, head over to our shop:</p>
+        <p>To see all of our boxes head over to our shop!</p>
         <button>Shop Now</button>
       </S.TextContainer>
       <S.ProductContainer>

@@ -19,7 +19,7 @@ function Checkout({ cartItems, total }) {
           <span>Item</span>
         </S.HeaderBlockContainer>
         <S.HeaderBlockContainer>
-          <span>Description</span>
+          <span></span>
         </S.HeaderBlockContainer>
         <S.HeaderBlockContainer>
           <span>Quantity</span>

@@ -13,7 +13,7 @@ import { selectCurrentUser } from "./redux/User/userSelectors";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About/About";
-import Shop from "./pages/Shop";
+import Shop from "./pages/ShopPage/Shop";
 import SignInUp from "./pages/SignInUp/SignInUp";
 import Checkout from "./pages/Checkout/Checkout";
 import Footer from "./components/Footer/Footer";

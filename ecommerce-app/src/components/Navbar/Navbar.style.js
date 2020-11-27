@@ -11,6 +11,22 @@ export const NavContainer = styled.div`
   top: 0;
   z-index: 10;
   background-color: white;
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -26,5 +42,11 @@ export const OptionsContainer = styled.div`
 
   * {
     margin: 0rem 0.5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    a {
+      font-size: 0.8rem;
+    }
   }
 `;
