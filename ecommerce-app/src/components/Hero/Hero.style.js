@@ -35,7 +35,7 @@ export const Content = styled.div`
     top: 35%;
   }
 
-  @media screen and (min-height: 700px) {
+  @media screen and (min-height: 810px) {
     font-size: 50%;
     top: 30%;
   }
